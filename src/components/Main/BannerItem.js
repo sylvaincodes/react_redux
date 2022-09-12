@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function BannerItem() {
     return (
@@ -7,8 +8,7 @@ export default function BannerItem() {
                 <img src="/images/banners/1.jpg" alt="" />
                 <div className="content">
                     <h2 className="content-title">
-
-                        <span className='letter' >c</span>
+                        <span className='letter'>c</span>
                         <span className='letter'>r</span>
                         <span className='letter'>e</span>
                         <span className='letter'>a</span>
@@ -17,9 +17,11 @@ export default function BannerItem() {
                         <span className='letter'>v</span>
                         <span className='letter'>e </span>
                     </h2>
-                    <p> style and fashion</p>
+                    <p className='content-p'> style and fashion</p>
                     <span> Faites la différence avec les lunettes modernes.</span>
-                    <button className='button-86'>shop now</button>
+                    <button className='button-86'>
+                        <Link className='link' to="/products">shop now</Link>
+                    </button>
                 </div>
             </section>
         </>

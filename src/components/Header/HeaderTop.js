@@ -5,7 +5,9 @@ export default function HeaderTop() {
 
         <>
                 <section className="header-top">
-                    <p className="header-notification">Super Deal - Livraison gratuite à patir de 50$</p>
+                    <div className='container'>
+                        <p className="header-notification">Super Deal - Livraison gratuite à patir de 50$</p>
+                    </div>
                 </section>
         </>
 

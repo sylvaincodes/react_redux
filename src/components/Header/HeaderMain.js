@@ -1,10 +1,19 @@
 import React from 'react'
 import { IoIosSearch, IoIosCart } from "react-icons/io";
+import {Link} from 'react-router-dom'
+import {useSelector} from 'react-redux'
 
-export default function HeaderFixed() {
+export default function HeaderMain() {
+
+    // useSeletor sert a lire les datas depuis le state global
+    const quantity = useSelector(state => state.cart.quantity)
+    const cart = useSelector(state => state.cart)
+    console.log(cart)
     return (
         <>
-                <section className="header-main fixed" data-desktop-menu-top-fixed>
+            <section className="header-main">
+
+                <div className='container'>
                     <div className='header-main-left'>
                         <div className='search-container'>
                             <div>FR</div>
@@ -14,7 +23,9 @@ export default function HeaderFixed() {
                             </div>
                         </div>
                     </div>
-                    <h1 className='header-logo'>luna</h1>
+                    <h1>
+                        <Link className='header-logo' to="/">luna</Link>  
+                    </h1>
                     <ul className='header-main-actions'>
                         <li>
                             <a href="#">SE CONNECTER</a>
@@ -22,12 +33,20 @@ export default function HeaderFixed() {
                         <li>
                             <a href="#">SINSCRIRE</a>
                         </li>
+                    <Link to={"/cart"}>
+
                         <li>
-                            <IoIosCart className='search-icon' />
+                            <IoIosCart className='cart-icon' />
+                            <span className='count-product'>{quantity}</span>
                         </li>
+                    </Link>
+
                     </ul>
 
-                </section>
+                </div>
+
+
+            </section>
         </>
 
     )

@@ -1,10 +1,11 @@
 import React from 'react'
 import { IoIosSearch, IoIosCart } from "react-icons/io";
 
-export default function HeaderMain() {
+export default function HeaderFixed() {
     return (
         <>
-                <section className="header-main">
+            <section className="header-main fixed" data-desktop-menu-top-fixed>
+                <div className='container'>
                     <div className='header-main-left'>
                         <div className='search-container'>
                             <div>FR</div>
@@ -26,8 +27,8 @@ export default function HeaderMain() {
                             <IoIosCart className='search-icon' />
                         </li>
                     </ul>
-
-                </section>
+                </div>
+            </section>
         </>
 
     )
